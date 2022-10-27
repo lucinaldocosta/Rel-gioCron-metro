@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+body{
+    background-color: #ccc;
+}
+.title{
+    text-align: center;
+    font-size: 30px;
+    margin: 10px 0;
+}
+section{
+    display: flex;
+    background-color: #fff;
+    width: 90vw;
+    height: 80vh;
+    justify-items: center;
+    align-items: center;
+    margin: auto;
+    flex-direction: column;
+}
+.relogio, .cronometro{
+    margin-top: 10px;
+    width: 92.5%;
+    height: 45%;
+}
+.controles{
+    margin: 10px 0;
+    width: 92.5%;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(146, 61, 12);
+}
+.relogio{
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.relogio_hora, .relogio_min, .relogio_seg{
+    color: #fff;
+    margin-right: 10px;
+    font-size: 80px;
+    font-family: 'Aref Ruqaa Ink', serif;
+}
+.cronometro{
+    background-color: #700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cronometro_hora, .cronometro_min, .cronometro_seg, .cronometro_miliseg{
+    color: #fff;
+    margin-right: 10px;
+    font-size: 80px;
+    font-family: 'Aref Ruqaa Ink', serif;
+}
+.iniciar, .parar, .restaurar{
+    font-size: 25px;
+    margin-left: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+}
+.iniciar:hover, .parar:hover, .restaurar:hover{
+    background-color: #ccc;
+    box-shadow: 2px 2px 5px 0 #000;
+}
+.iniciar:active, .parar:active, .restaurar:active{
+    background-color: #ccc;
+    box-shadow: 2px 2px 5px 0 #000;
+}
+footer{
+    display: inline-block;
+    position: fixed;
+    bottom: 0;
+    height: 8vh;
+    width: 100vw;
+    background-color: #555;
+}
+.copyright{
+    text-align: center;
+    margin-top: 18px;
+    color: #ddd;
+    font-weight: bold;
+}
+
+/* Tamanho responsivo para tablet */
+
+@media screen and (max-width: 1023px) and (min-width: 768px){
+    section{
+        width: 70vw;
+        height: 80vh;
+    }
+    .iniciar, .parar, .restaurar{
+        font-size: 20px;
+        margin-top: 8px;
+        padding: 10px;
+        width: 120px;
+    }
+    .relogio_hora, .relogio_min, .relogio_seg{
+        font-size: 70px;
+    }
+    .cronometro_hora, .cronometro_min, .cronometro_seg, .cronometro_miliseg{
+        font-size: 60px;
+    }
+}
+
+/* Tamanho responsivo para movil */
+
+@media screen and (max-width: 767px) and (min-width: 320px){
+    section{
+        width: 45vw;
+        height: 70vh;
+    }
+    .controles{
+        flex-direction: column;
+        margin: 10px 0;
+        width: 92.5%;
+        height: 35vh;
+    }
+    .iniciar, .parar, .restaurar{
+        font-size: 18px;
+        margin-top: 8px;
+        padding: 5px;
+        width: 120px;
+    }
+    .relogio_hora, .relogio_min, .relogio_seg{
+        font-size: 40px;
+    }
+    .cronometro_hora, .cronometro_min, .cronometro_seg, .cronometro_miliseg{
+        font-size: 30px;
+    }
+}
